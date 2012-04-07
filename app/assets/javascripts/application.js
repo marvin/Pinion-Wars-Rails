@@ -12,4 +12,6 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require crafty
+//= require pinionwars
 //= require_tree .
