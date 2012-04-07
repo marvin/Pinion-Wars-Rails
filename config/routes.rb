@@ -1,11 +1,19 @@
 Pinionwars::Application.routes.draw do
+  # get "score/index"
+  # get "score/create"
+  # get "game/index"
+  # get "game/start"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
   # Keep in mind you can assign values other than :controller and :action
-
+  match 'game/:player' => 'game#start'
+  match 'game' => 'game#index'
+  match 'scores' => 'score#index'
+  match 'scores/create' => 'score#create'
   # Sample of named route:
   #   match 'products/:id/purchase' => 'catalog#purchase', :as => :purchase
   # This route can be invoked with purchase_url(:id => product.id)
@@ -48,7 +56,7 @@ Pinionwars::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'game#index'
 
   # See how all your routes lay out with "rake routes"
 
